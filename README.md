@@ -20,7 +20,7 @@ These procedures will help you to set up and to run the same project.
 
 * Touch keypad
 
-* 2 Battery Packs + AA batteries
+* 2 Battery Packs + 6 AA batteries
 
 <img width="412" alt="Screen Shot 2021-12-03 at 1 50 47 PM" src="https://user-images.githubusercontent.com/87663736/144656896-219577b5-89bd-4eda-bc4e-ee393009d142.png">
 

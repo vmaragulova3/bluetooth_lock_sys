@@ -7,7 +7,7 @@ This project includes a prototype of the smart door lock. It consists of the LCD
 # Getting Started
 These procedures will help you to set up and to run the same project.
 
-# Prerequisites
+# Parts
 
 # Installing
 

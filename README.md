@@ -29,6 +29,9 @@ These procedures will help you to set up and to run the same project.
 
 * Raspberry Pi NoIR camera V2
 
+<img width="412" alt="Screen Shot 2021-12-03 at 1 42 07 PM" src="https://user-images.githubusercontent.com/87663736/144655860-717c1974-c8e7-43d2-bcff-8c6efe0c4836.png">
+
+
 * Raspberry Pi Zero
 
 # Hardware Set Up

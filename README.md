@@ -24,6 +24,9 @@ These procedures will help you to set up and to run the same project.
 
 * Adafruit Bluetooth LE UART Friend module
 
+<img width="412" alt="Screen Shot 2021-12-03 at 1 39 41 PM" src="https://user-images.githubusercontent.com/87663736/144655538-829f3ac9-ea62-430d-914a-61b53b4a2cb0.png">
+
+
 * Raspberry Pi NoIR camera V2
 
 * Raspberry Pi Zero

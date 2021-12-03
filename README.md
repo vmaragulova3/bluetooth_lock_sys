@@ -34,6 +34,9 @@ These procedures will help you to set up and to run the same project.
 
 * Raspberry Pi Zero
 
+<img width="412" alt="Screen Shot 2021-12-03 at 1 43 11 PM" src="https://user-images.githubusercontent.com/87663736/144655982-5e7eefcf-4ab9-49a5-b8db-511358620e21.png">
+
+
 # Hardware Set Up
 
 # Software

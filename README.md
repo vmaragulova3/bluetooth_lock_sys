@@ -2,7 +2,7 @@
 Veronika Maragulova, Sanket Nadgauda, Vinay Balamourougan, Dakota Survance 
 
 # Bluetooth Lock System
-This project includes a prototype of the smart door lock. To open the door with this lock, the user would have to know the correct password. If the combination is correct, the LED turns from red to green, and the lock opens up. The LCD screen shows the status of the lock. In this case, it will go from "locked" to "open." The camera captures the picture of the user and sends it via email for extra security measures.  
+This project includes a prototype of the remote smart door lock. To open the door with this lock, the user would have to know the correct password. If the combination is correct, the LED turns from red to green, and the lock opens up. The LCD screen shows the status of the lock. In this case, it will go from "locked" to "open." The camera captures the picture of the user and sends it via email for extra security measures.  
 
 # Getting Started
 These procedures will help you to set up and to run the same project.
@@ -20,7 +20,13 @@ These procedures will help you to set up and to run the same project.
 
 * Touch keypad
 
-* Servo
+* 2 Battery Packs + AA batteries
+
+<img width="412" alt="Screen Shot 2021-12-03 at 1 50 47 PM" src="https://user-images.githubusercontent.com/87663736/144656896-219577b5-89bd-4eda-bc4e-ee393009d142.png">
+
+* RC Servo
+
+<img width="412" alt="Screen Shot 2021-12-03 at 1 48 51 PM" src="https://user-images.githubusercontent.com/87663736/144656670-5152a530-9254-4be3-bcb4-215fc030b8e9.png">
 
 * Adafruit Bluetooth LE UART Friend module
 

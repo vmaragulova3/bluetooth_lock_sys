@@ -9,7 +9,7 @@ These procedures will help you to set up and to run the same project.
 
 # Parts
 
-# Hardware
+# Hardware Set Up
 
 # Software
 

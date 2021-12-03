@@ -2,7 +2,7 @@
 Veronika Maragulova, Sanket Nadgauda, Vinay Balamourougan, Dakota Survance 
 
 # Bluetooth Lock System
-This project includes a prototype of the remote smart door lock. To open the door with this lock, the user would have to know the correct password. If the combination is correct, the LED turns from red to green, and the lock opens up. The LCD screen shows the status of the lock. In this case, it will go from "locked" to "open." The camera captures the picture of the user and sends it via email for extra security measures.  
+This project includes a prototype of the remote smart door lock. To open the door with this lock, the user would have to know the correct password. If the combination is correct, the LED turns from red to green, and the lock opens up. The LCD screen shows the status of the lock. In this case, it will go from "locked" to "open." The camera captures the picture of the user and sends it via email for extra security measures. If the password combination is incorrect, then LCD screen shows "locked" message and the LED stays red.
 
 # Getting Started
 These procedures will help you to set up and to run the same project.

@@ -9,7 +9,10 @@ These procedures will help you to set up and to run the same project.
 
 # Parts
 
-* LCD screen
+* uLCD-144-G2 128 by 128 Smart Color LCD
+
+<img width="412" alt="Screen Shot 2021-12-03 at 1 35 11 PM" src="https://user-images.githubusercontent.com/87663736/144654948-4e799058-f7ff-4010-a38e-5fe0fa8dddae.png">
+
 
 * RGB LED
 

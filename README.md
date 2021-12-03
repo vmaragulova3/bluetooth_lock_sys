@@ -18,8 +18,6 @@ These procedures will help you to set up and to run the same project.
 
 <img width="412" alt="Screen Shot 2021-12-03 at 1 36 05 PM" src="https://user-images.githubusercontent.com/87663736/144655072-f4712c32-0e90-4163-86ce-bd211492e435.png">
 
-* Touch keypad
-
 * 2 Battery Packs + 6 AA batteries
 
 <img width="412" alt="Screen Shot 2021-12-03 at 1 50 47 PM" src="https://user-images.githubusercontent.com/87663736/144656896-219577b5-89bd-4eda-bc4e-ee393009d142.png">

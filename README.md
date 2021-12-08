@@ -68,7 +68,7 @@ The code uses two string variables to keep track of the current pin entered and 
 There is also a switch statement to read inputs from the bluetooth module. The controller pad in the Bluefruit Connect app is used to control the mechanism. The numbers one through 4 are used for entering the pin. The up button checks to see if the pin entered is correct. The entered pin then clears. If the pin is correct, the LED turns from red to green. The right button closes the lock and clears the entered pin if it is not already cleared. The down button simply clears the entered pin. 
 
 Here is the full code file:
-```
+```cpp
 #include "mbed.h"
 #include "rtos.h"
 #include "Servo.h"

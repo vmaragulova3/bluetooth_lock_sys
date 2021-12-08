@@ -54,6 +54,7 @@ These procedures will help you to set up and to run the same project.
 Below is a table of all the pin outs and wiring details necessary for assembly.
 
 ![pin_out_table](https://user-images.githubusercontent.com/82181571/145150355-7e5efb71-6848-43cf-b197-86b43982bf08.jpg)
+Note: A standard portable battery power bank that charges smartphones with a micro USB cable is recommended to power the Pi.
 
 ![image](https://user-images.githubusercontent.com/87663736/145260791-c75db95a-5855-4d42-a2ca-647d856a67c6.png)
 

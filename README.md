@@ -45,9 +45,10 @@ These procedures will help you to set up and to run the same project.
 <img width="412" alt="Screen Shot 2021-12-03 at 1 42 07 PM" src="https://user-images.githubusercontent.com/87663736/144655860-717c1974-c8e7-43d2-bcff-8c6efe0c4836.png">
 
 
-* Raspberry Pi Zero
+* Raspberry Pi 3 Model B+
 
-<img width="412" alt="Screen Shot 2021-12-03 at 1 43 11 PM" src="https://user-images.githubusercontent.com/87663736/144655982-5e7eefcf-4ab9-49a5-b8db-511358620e21.png">
+<img width="410" alt="Screen Shot 2021-12-08 at 1 13 43 PM" src="https://user-images.githubusercontent.com/87663736/145261492-11fb9a08-2044-4a85-8a61-4fe285cb00a7.png">
+
 
 # Hardware Set Up
 Below is a table of all the pin outs and wiring details necessary for assembly.

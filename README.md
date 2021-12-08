@@ -213,6 +213,11 @@ int main()
 }
 
 ```
+
+Once the program on the mBED is uploaded and working correctly
+
+![image](https://user-images.githubusercontent.com/55465942/145265346-73506881-d1a1-414b-9ae3-038163c25696.png)
+
 # Tests
 
 # Demo

@@ -61,7 +61,156 @@ A more visual depiction is included with the schematic below:
 ![0001](https://user-images.githubusercontent.com/82181571/145151013-cd85bb54-9ffe-4226-8307-74941b85d096.jpg)
 
 # Software
+The program on the mbed consisted of C++ code and 2 additional libraries (4DGL-uLCD-SE, Servo) for the peripherals. 
 
+The code uses two string variables to keep track of the current pin entered and the desired pin. There is also a boolean flag to keep track of the status of the lock. This flag is used to keep the status printed onto the LCD screen. The currently entered pin is also printed to the LCD screen. 
+
+There is also a switch statement to read inputs from the bluetooth module. The controller pad in the Bluefruit Connect app is used to control the mechanism. The numbers one through 4 are used for entering the pin. The up button checks to see if the pin entered is correct. The entered pin then clears. If the pin is correct, the LED turns from red to green. The right button closes the lock and clears the entered pin if it is not already cleared. The down button simply clears the entered pin. 
+
+Here is the full code file:
+```
+#include "mbed.h"
+#include "rtos.h"
+#include "Servo.h"
+#include "uLCD_4DGL.h"
+#include <string>
+
+uLCD_4DGL uLCD(p9,p10,p11); // serial tx, serial rx, reset pin;
+Serial blue(p28,p27);
+PwmOut red(p22);
+PwmOut green(p23);
+Servo myservo(p24);
+DigitalOut raspberryConnect(p12);
+
+int main()
+{
+    myservo = 0.0;
+    wait(0.5);
+    myservo = 1.0;
+    wait(0.5);
+    std::string pinCorrect = "1234";
+    std::string pin = "";
+    
+    char bnum=0;
+    char bhit=0;
+    
+    bool open=1;
+    
+    red = 1;
+    
+    uLCD.cls();
+    uLCD.baudrate(3000000);
+    while(1) {
+        uLCD.text_width(2);
+        uLCD.text_height(2); 
+        uLCD.locate(1,2);
+        uLCD.color(WHITE);
+        uLCD.printf("%s\n", pin);
+        if (open) {
+            uLCD.text_width(2);
+            uLCD.text_height(2); 
+            uLCD.locate(1,4);
+            uLCD.color(0x00FF00);
+            uLCD.printf("Status : Opened\n");
+            wait(0.5);
+        } else {
+            uLCD.text_width(2);
+            uLCD.text_height(2); 
+            uLCD.locate(1,4);
+            uLCD.color(0xFF0000);
+            uLCD.printf("Status : Closed\n");
+            wait(0.5);
+        }
+        raspberryConnect = 0;
+        if (blue.getc()=='!') {
+            if (blue.getc()=='B') { //button data packet
+                bnum = blue.getc(); //button number
+                bhit = blue.getc(); //1=hit, 0=release
+                if (blue.getc()==char(~('!' + 'B' + bnum + bhit))) { //checksum OK?
+                    switch (bnum) {
+                        case '1': //number button 1
+                            if (bhit=='1') {
+                                pin.append("1");
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        case '2': //number button 2
+                            if (bhit=='1') {
+                                pin.append("2");
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        case '3': //number button 3
+                            if (bhit=='1') {
+                                pin.append("3");
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        case '4': //number button 4
+                            if (bhit=='1') {
+                                pin.append("4");
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        case '5': //button 5 up arrow (check the pin entry)
+                            if (bhit=='1') {
+                                if (open==1) {
+                                    pin = "";
+                                } else {
+                                    if (pin == pinCorrect){
+                                        pin = ""; // reset pin entry when wrong
+                                        raspberryConnect = 1;
+                                        wait(.5);
+                                        raspberryConnect = 0;
+                                        green = 1;
+                                        red = 0;
+                                        open = 1;
+                                        myservo = 1.0;
+                                        wait(1);
+                                        uLCD.cls();
+                                    } else{
+                                        pin = ""; // reset pin entry when wrong
+                                        red = 1;
+                                        green = 0;
+                                    } 
+                                }
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        case '6': //button 6 down arrow (reset the pin entry)
+                            if (bhit=='1') {
+                                uLCD.cls();
+                                pin = ""; //add hit code here
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        case '8': //button 8 right arrow (close lock)
+                            if (bhit=='1') {
+                                 red = 1;
+                                 green = 0;
+                                 open = 0;
+                                 myservo = 0.25; //add hit code here
+                                 wait(0.5);
+                            } else {
+                                //add release code here
+                            }
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
+        }
+    }
+}
+
+```
 # Tests
 
 # Demo

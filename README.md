@@ -218,7 +218,7 @@ int main()
 
 Taking a picture of those who successfully unlocked the mechanism as well as sending the picture in an email to the owner falls on the Raspberry Pi. When the door is unlocked, the Mbed sends a digital 1 to one of the Raspberry Pi GPIO pins. When this pin is read as high, a flow within Node-RED takes a picture and sends it in an email. 
 
-To start, install a fresh Raspberry Pi OS using the Raspberry Pi Imager onto a 8GB micro SD card.
+To start, install a fresh Raspberry Pi OS using the Raspberry Pi Imager onto a 8GB micro SD card:
 
 https://www.raspberrypi.com/software/
 
@@ -250,6 +250,8 @@ Note: Any of the Raspberry Pi GPIO pins can be used as a digital input from the 
 https://support.google.com/mail/answer/185833?hl=en
 
 Configure the email block with your email address and the newly generated app password, leave both checkboxes checked, use port 465, and set the server to smtp.gmail.com.
+
+Finally, set the Take Photo Node to Buffered Mode so that the picture goes straight into the email as an attatchment. 
 
 # Tests
 

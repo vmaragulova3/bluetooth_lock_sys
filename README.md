@@ -63,7 +63,7 @@ A more visual depiction is included with the schematic below:
 ![0001](https://user-images.githubusercontent.com/82181571/145151013-cd85bb54-9ffe-4226-8307-74941b85d096.jpg)
 
 # Software
-The program on the mbed consisted of C++ code and 2 additional libraries (4DGL-uLCD-SE, Servo) for the peripherals. 
+The program on the Mbed consisted of C++ code and 2 additional libraries (4DGL-uLCD-SE, Servo) for the peripherals. 
 
 The code uses two string variables to keep track of the current pin entered and the desired pin. There is also a boolean flag to keep track of the status of the lock. This flag is used to keep the status printed onto the LCD screen. The currently entered pin is also printed to the LCD screen. 
 
@@ -214,9 +214,42 @@ int main()
 
 ```
 
-Once the program on the mBED is uploaded and working correctly
+# Pi Setup
+
+Taking a picture of those who successfully unlocked the mechanism as well as sending the picture in an email to the owner falls on the Raspberry Pi. When the door is unlocked, the Mbed sends a digital 1 to one of the Raspberry Pi GPIO pins. When this pin is read as high, a flow within Node-RED takes a picture and sends it in an email. 
+
+To start, install a fresh Raspberry Pi OS using the Raspberry Pi Imager onto a 8GB micro SD card.
+
+https://www.raspberrypi.com/software/
+
+Next, install Node Red using the instructions below:
+
+https://nodered.org/docs/getting-started/raspberrypi
+
+One Node-RED is installed, install the email node with the following commands:
+
+```
+cd ~/.node-red
+npm i node-red-node-email
+```
+
+Follow the isntructions to install the Node Red camera node (stop at Node-RED Dashboard):
+
+https://randomnerdtutorials.com/node-red-with-raspberry-pi-camera-take-photos/
+
+Once, everything is installed, launch Node-RED using
+
+```node-red-start```
+
+Create the follwing flow as seen below:
 
 ![image](https://user-images.githubusercontent.com/55465942/145265346-73506881-d1a1-414b-9ae3-038163c25696.png)
+
+Note: Any of the Raspberry Pi GPIO pins can be used as a digital input from the Mbed. The trigger block can be configured so that repeat unlocks within a certain timeframe (we used 10 seconds) do not trigger another photo or email. To get a gmail address to properly send the email, two factor authentication as well as an app password are needed. Instructions for generating an app password are found here: 
+
+https://support.google.com/mail/answer/185833?hl=en
+
+Configure the email block with your email address and the newly generated app password, leave both checkboxes checked, use port 465, and set the server to smtp.gmail.com.
 
 # Tests
 

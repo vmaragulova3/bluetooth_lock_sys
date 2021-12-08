@@ -52,13 +52,13 @@ These procedures will help you to set up and to run the same project.
 # Hardware Set Up
 Below is a table of all the pin outs and wiring details necessary for assembly.
 
-![pin_out_table](https://user-images.githubusercontent.com/82181571/145149740-984e7057-3809-4c80-b3c3-c221ec9c7e7a.jpg)
+![pin_out_table](https://user-images.githubusercontent.com/82181571/145150355-7e5efb71-6848-43cf-b197-86b43982bf08.jpg)
 
 ![led](https://user-images.githubusercontent.com/82181571/145149939-0ffdc11d-b527-4bf1-85b7-6b114f4b1d82.jpg)
 
 A more visual depiction is included with the schematic below:
 
-![0001](https://user-images.githubusercontent.com/82181571/145149808-311b9360-8ece-4839-8c1c-a6a219de5193.jpg)
+![0001](https://user-images.githubusercontent.com/82181571/145151013-cd85bb54-9ffe-4226-8307-74941b85d096.jpg)
 
 # Software
 

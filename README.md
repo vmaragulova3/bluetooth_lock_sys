@@ -9,7 +9,7 @@ These procedures will help you to set up and to run the same project.
 
 # Parts
 
-* 2 Breadboards
+* Breadboard
 
 <img width="412" alt="Screen Shot 2021-12-03 at 1 56 46 PM" src="https://user-images.githubusercontent.com/87663736/144657700-1cc046e4-9774-4fe5-8b36-40d7c3562623.png">
 

@@ -1,13 +1,14 @@
-# Team Members
+# *SmartLock*
+## Team Members
 Veronika Maragulova, Sanket Nadgauda, Vinay Balamourougan, Dakota Survance 
 
-# "SmartLock" Bluetooth Lock System
+## Bluetooth Lock System
 This project includes a prototype of the remote smart door lock. To open the door with this lock, the user would have to know the correct password. If the combination is correct, the LED turns from red to green, and the lock opens up. The LCD screen shows the status of the lock and the current pin entry. In this case, it will go from "locked" to "opened." The camera captures the picture of the user and sends it via email for extra security measures. If the password combination is incorrect, then LCD screen shows "locked" message and the LED stays red.
 
-# Getting Started
+## Getting Started
 These procedures will help you to set up and to run the same project.
 
-# Parts
+## Parts
 
 * Breadboard
 
@@ -50,7 +51,7 @@ These procedures will help you to set up and to run the same project.
 <img width="410" alt="Screen Shot 2021-12-08 at 1 13 43 PM" src="https://user-images.githubusercontent.com/87663736/145261492-11fb9a08-2044-4a85-8a61-4fe285cb00a7.png">
 
 
-# Hardware Set Up
+## Hardware Set Up
 Below is a table of all the pin outs and wiring details necessary for assembly.
 
 ![pin_out_table](https://user-images.githubusercontent.com/82181571/145150355-7e5efb71-6848-43cf-b197-86b43982bf08.jpg)
@@ -63,7 +64,7 @@ A more visual depiction is included with the schematic below:
 
 ![0001](https://user-images.githubusercontent.com/82181571/145151013-cd85bb54-9ffe-4226-8307-74941b85d096.jpg)
 
-# Software
+## Software
 The program on the Mbed consisted of C++ code and 2 additional libraries (4DGL-uLCD-SE, Servo) for the peripherals. 
 
 The code uses two string variables to keep track of the current pin entered and the desired pin. There is also a boolean flag to keep track of the status of the lock. This flag is used to keep the status printed onto the LCD screen. The currently entered pin is also printed to the LCD screen. 
@@ -215,7 +216,7 @@ int main()
 
 ```
 
-# Pi Setup
+## Pi Setup
 
 Taking a picture of those who successfully unlocked the mechanism as well as sending the picture in an email to the owner falls on the Raspberry Pi. When the door is unlocked, the Mbed sends a digital 1 to one of the Raspberry Pi GPIO pins. When this pin is read as high, a flow within Node-RED takes a picture and sends it in an email. 
 
@@ -254,6 +255,6 @@ Configure the email block with your email address and the newly generated app pa
 
 Finally, set the Take Photo Node to Buffered Mode so that the picture goes straight into the email as an attatchment. 
 
-# Demo
+## Demo
 [![Smart Lock Demo](https://img.youtube.com/vi/ZJKcSQkq9SI/0.jpg)](https://www.youtube.com/watch?v=ZJKcSQkq9SI)
 

@@ -219,7 +219,7 @@ int main()
 
 Taking a picture of those who successfully unlocked the mechanism as well as sending the picture in an email to the owner falls on the Raspberry Pi. When the door is unlocked, the Mbed sends a digital 1 to one of the Raspberry Pi GPIO pins. When this pin is read as high, a flow within Node-RED takes a picture and sends it in an email. 
 
-To start, install a fresh Raspberry Pi OS using the Raspberry Pi Imager onto a 8GB micro SD card:
+To start, install a fresh Raspberry Pi OS using the Raspberry Pi Imager onto a 16GB micro SD card:
 
 https://www.raspberrypi.com/software/
 

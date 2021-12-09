@@ -254,7 +254,5 @@ Configure the email block with your email address and the newly generated app pa
 
 Finally, set the Take Photo Node to Buffered Mode so that the picture goes straight into the email as an attatchment. 
 
-# Tests
-
 # Demo
 
